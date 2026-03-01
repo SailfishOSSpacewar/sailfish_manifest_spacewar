@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<manifest>
+	<project
+	    path="device/nothing/spacewar"
+	    name="SailfishOSSpacewar/android_device_nothing_Spacewar"
+	    revision="lineage-20" />
+	<project
+	    path="kernel/nothing/sm7325"
+	    name="SailfishOSSpacewar/android_kernel_nothing_sm7325"
+	    revision="lineage-20" />
+	<project
+	    path="vendor/nothing/spacewar"
+	    name="SailfishOSSpacewar/android_device_nothing_Spacewar"
+	    revision="lineage-20" />
+	<project 
+		path="hardware/nothing" 
+		name="SailfishOSSpacewar/android_hardware_nothing" 
+		revision="lineage-20" />
+	<project
+	    path="external/libhybris"
+	    name="mer-hybris/libhybris"
+	    revision="master" />
+</manifest>
