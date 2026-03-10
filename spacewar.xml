@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <manifest>
-	<project
-	    path="device/nothing/spacewar"
-	    name="SailfishOSSpacewar/android_device_nothing_Spacewar"
-	    revision="lineage-20" />
-	<project
-	    path="kernel/nothing/sm7325"
-	    name="SailfishOSSpacewar/android_kernel_nothing_sm7325"
-	    revision="lineage-20" />
-	<project
-	    path="vendor/nothing/spacewar"
-	    name="SailfishOSSpacewar/android_device_nothing_Spacewar"
-	    revision="lineage-20" />
-	<project 
-		path="hardware/nothing" 
-		name="SailfishOSSpacewar/android_hardware_nothing" 
-		revision="lineage-20" />
-	<project
-	    path="external/libhybris"
-	    name="mer-hybris/libhybris"
-	    revision="master" />
+	<project path="device/nothing/Spacewar" name="SailfishOSSpacewar/android_device_nothing_Spacewar" revision="lineage-21" />
+	<project path="kernel/nothing/sm7325" name="SailfishOSSpacewar/android_kernel_nothing_sm7325" revision="hybris-23.2" />
+	<project path="vendor/nothing/Spacewar" name="SailfishOSSpacewar/proprietary_vendor_nothing_Spacewar" revision="lineage-21" />
+	<project path="hardware/nothing" name="SailfishOSSpacewar/android_hardware_nothing" revision="lineage-21" />
+	<project path="external/libhybris" name="mer-hybris/libhybris" revision="master" />
+    <project path="rpm/" name="SailfishOSSpacewar/droid-hal-Spacewar" revision="master" />
+    <project path="hybris/droid-configs" name="SailfishOSSpacewar/droid-configs-Spacewar" revision="master" />
+    <project path="hybris/droid-hal-version-Spacewar" name="SailfishOSSpacewar/droid-hal-version-Spacewar" revision="master" />
+    <project path="hybris/droid-hal-img-boot-Spacewar" name="SailfishOSSpacewar/droid-hal-img-boot-Spacewar" revision="master" />
+	<project path="hybris/droid-config-Spacewar" name="SailfishOSSpacewar/droid-config-Spacewar" revision="master" />
+    <remove-project path="hybris/hybris-boot" name="mer-hybris/hybris-boot" />
+    <project path="hybris/hybris-boot" name="SailfishOSSpacewar/hybris-boot" revision="fp6" />
 </manifest>
