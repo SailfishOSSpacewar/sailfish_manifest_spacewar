@@ -6,7 +6,7 @@
 	<project path="hardware/nothing" name="SailfishOSSpacewar/android_hardware_nothing" revision="lineage-21" />
 	<project path="external/libhybris" name="mer-hybris/libhybris" revision="master" />
     <project path="rpm/" name="SailfishOSSpacewar/droid-hal-Spacewar" revision="master" />
-    <project path="hybris/droid-configs" name="SailfishOSSpacewar/droid-configs-Spacewar" revision="master" />
+    <project path="hybris/droid-configs" name="SailfishOSSpacewar/droid-config-Spacewar" revision="master" />
     <project path="hybris/droid-hal-version-Spacewar" name="SailfishOSSpacewar/droid-hal-version-Spacewar" revision="master" />
     <project path="hybris/droid-hal-img-boot-Spacewar" name="SailfishOSSpacewar/droid-hal-img-boot-Spacewar" revision="master" />
 	<project path="hybris/droid-config-Spacewar" name="SailfishOSSpacewar/droid-config-Spacewar" revision="master" />
