@@ -11,4 +11,6 @@
 	<project path="hybris/droid-config-Spacewar" name="SailfishOSSpacewar/droid-config-Spacewar" revision="master" />
     <remove-project path="hybris/hybris-boot" name="mer-hybris/hybris-boot" />
     <project path="hybris/hybris-boot" name="SailfishOSSpacewar/hybris-boot" revision="Spacewar" />
+	<project path="external/libhybris" name="mer-hybris/libhybris" revision="master" />
+	<project path="vendor/apn" name="LineageOS/android_vendor_apn" revision="master" />
 </manifest>
