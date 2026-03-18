@@ -12,5 +12,5 @@
     <remove-project path="hybris/hybris-boot" name="mer-hybris/hybris-boot" />
     <project path="hybris/hybris-boot" name="SailfishOSSpacewar/hybris-boot" revision="Spacewar" />
 	<project path="external/libhybris" name="mer-hybris/libhybris" revision="master" />
-	<project path="vendor/apn" name="LineageOS/android_vendor_apn" revision="master" />
+	<project path="vendor/apn" name="LineageOS/android_vendor_apn" revision="main" />
 </manifest>
