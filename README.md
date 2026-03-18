@@ -191,6 +191,9 @@ cd $ANDROID_ROOT/hybris/mw
 git clone https://github.com/mer-hybris/qt5-qpa-hwcomposer-plugin.git
 ```
 ```
+cd qt5-qpa-hwcomposer-plugin
+```
+```
 git reset --hard 5.6.2.26
 ```
 ```
