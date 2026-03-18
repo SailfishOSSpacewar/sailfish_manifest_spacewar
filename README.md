@@ -165,6 +165,12 @@ sdk-assistant create $VENDOR-$DEVICE-$PORT_ARCH https://releases.sailfishos.org/
 ```
 ## Build Droid HAL Building the droid-hal-device packages $PlatformSDK
 ```
+cd $ANDROID_ROOT/hybris/droid-configs
+```
+```
+git submodule update --recursive
+```
+```
 cd $ANDROID_ROOT
 ```
 ```
