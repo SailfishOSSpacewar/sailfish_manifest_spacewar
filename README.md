@@ -129,7 +129,7 @@ cd $ANDROID_ROOT
 repo init -u https://github.com/mer-hybris/android.git -b hybris-21.0
 ```
 ```
-git clone https://github.com/SailfishOSSpacewar/sailfish_manifest_Spacewar.git .repo/local_manifests
+git clone https://github.com/SailfishOSSpacewar/sailfish_manifest_spacewar.git .repo/local_manifests
 ```
 ```
 repo sync --fetch-submodules -j$(nproc --all)
