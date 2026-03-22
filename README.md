@@ -155,7 +155,12 @@ The following command will take time! Grab a coffee and relax (or go touch the g
 ```
 make -j$(nproc --all) hybris-hal droidmedia
 ```
-> if you want check kernel defconfig: hybris/mer-kernel-check/mer_verify_kernel_config ./out/target/product/$DEVICE/obj/KERNEL_OBJ/.config
+Also need to build audio hidl compat
+```
+make audio.hidl_compat.default
+```
+> Might be a good idea to check kernel defconfig by running : hybris/mer-kernel-check/mer_verify_kernel_config ./out/target/product/$DEVICE/obj/KERNEL_OBJ/.config
+
 ## Install Tooling $PlatformSDK
 ```
 sdk-assistant create SailfishOS-latest https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z
@@ -164,12 +169,36 @@ sdk-assistant create SailfishOS-latest https://releases.sailfishos.org/sdk/targe
 sdk-assistant create $VENDOR-$DEVICE-$PORT_ARCH https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-aarch64.tar.7z
 ```
 ## Build Droid HAL Building the droid-hal-device packages $PlatformSDK
+
+Prepare everything first !
+
+```
+source ~/.hadk.env
+```
+```
+cd $ANDROID_ROOT/out/target/product/$DEVICE/
+```
+```
+mv hybris-boot.img bak
+```
+```
+mv vendor_boot.img vbak
+```
+```
+wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/hybris-boot.img
+```
+```
+wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/vendor_boot.img
+```
 ```
 cd $ANDROID_ROOT/hybris/droid-configs
 ```
 ```
 git submodule update --recursive
 ```
+
+Now build the RPMs
+
 ```
 cd $ANDROID_ROOT
 ```
@@ -225,7 +254,7 @@ rpm/dhd/helpers/build_packages.sh --version
 # Build SailfishOS (LVM based)
 [Version](https://en.wikipedia.org/wiki/Sailfish_OS#Version_history)
 ```
-export RELEASE=5.0.0.62
+export RELEASE=5.0.0.67
 ```
 Put whatever you want here, i.e my1
 ```
@@ -247,4 +276,4 @@ sed -i "s @DEVICEMODEL@ $DEVICE " $srcks
 rpm/dhd/helpers/build_packages.sh --mic
 ```
 
-[**If you want support, tell me**](https://t.me/nc1x72)
+[**If you want support, contact me**](https://t.me/nc1x72)
