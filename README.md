@@ -12,7 +12,7 @@ sudo apt-get update && sudo apt-get -y install libpam-pwquality
 cat <<EOF > ~/.hadk.env
 export ANDROID_ROOT="$HOME/hadk"
 export VENDOR="nothing"
-export DEVICE="Spacewar"
+export DEVICE="spacewar"
 export PORT_ARCH="aarch64"
 EOF
 ```
