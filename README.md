@@ -194,7 +194,7 @@ wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/vendor_b
 cd $ANDROID_ROOT/hybris/droid-configs
 ```
 ```
-git submodule update --recursive
+git submodule update --init --recursive
 ```
 
 Now build the RPMs
