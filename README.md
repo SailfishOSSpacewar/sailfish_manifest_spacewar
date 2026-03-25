@@ -159,22 +159,8 @@ Also need to build audio hidl compat
 ```
 make audio.hidl_compat.default
 ```
-> Might be a good idea to check kernel defconfig by running : hybris/mer-kernel-check/mer_verify_kernel_config ./out/target/product/$DEVICE/obj/KERNEL_OBJ/.config
+Install the working hybris-boot and vendor_boot
 
-## Install Tooling $PlatformSDK
-```
-sdk-assistant create SailfishOS-latest https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z
-```
-```
-sdk-assistant create $VENDOR-$DEVICE-$PORT_ARCH https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-aarch64.tar.7z
-```
-## Build Droid HAL Building the droid-hal-device packages $PlatformSDK
-
-Prepare everything first !
-
-```
-source ~/.hadk.env
-```
 ```
 cd $ANDROID_ROOT/out/target/product/$DEVICE/
 ```
@@ -189,6 +175,23 @@ wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/hybris-b
 ```
 ```
 wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/vendor_boot.img
+```
+
+> Might be a good idea to check kernel defconfig by running (if the result doesn't return empty, need to enable the specified config in defconfig) : hybris/mer-kernel-check/mer_verify_kernel_config ./out/target/product/$DEVICE/obj/KERNEL_OBJ/.config | grep ERROR
+
+## Install Tooling $PlatformSDK
+```
+sdk-assistant create SailfishOS-latest https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Tooling-i486.tar.7z
+```
+```
+sdk-assistant create $VENDOR-$DEVICE-$PORT_ARCH https://releases.sailfishos.org/sdk/targets/Sailfish_OS-latest-Sailfish_SDK_Target-aarch64.tar.7z
+```
+## Build Droid HAL Building the droid-hal-device packages $PlatformSDK
+
+Prepare everything first !
+
+```
+source ~/.hadk.env
 ```
 ```
 cd $ANDROID_ROOT/hybris/droid-configs
