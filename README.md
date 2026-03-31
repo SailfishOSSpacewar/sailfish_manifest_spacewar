@@ -176,7 +176,25 @@ wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/hybris-b
 ```
 wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/vendor_boot.img
 ```
-
+Install modules
+```
+cd out/target/product/$DEVICE/vendor_dlkm/lib/modules/
+```
+```
+sudo rm -rf *
+```
+```
+wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/modules.tar
+```
+```
+tar xvf modules.tar
+```
+```
+rm modules.tar
+```
+```
+cd $ANDROID_ROOT
+```
 > Might be a good idea to check kernel defconfig by running (if the result doesn't return empty, need to enable the specified config in defconfig) : hybris/mer-kernel-check/mer_verify_kernel_config ./out/target/product/$DEVICE/obj/KERNEL_OBJ/.config | grep ERROR
 
 ## Install Tooling $PlatformSDK
