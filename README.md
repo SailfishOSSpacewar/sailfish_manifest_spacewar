@@ -60,7 +60,7 @@ sfossdk
 sudo zypper ref
 ```
 ```
-sudo zypper in android-tools-hadk kmod createrepo_c nano
+sudo zypper in android-tools-hadk kmod createrepo_c nano ncurses
 ```
 ```
 source ~/.hadk.env
@@ -159,16 +159,13 @@ Also need to build audio hidl compat
 ```
 make audio.hidl_compat.default
 ```
-Install the working hybris-boot and vendor_boot
+Install the working hybris-boot, vendor_boot and kernel modules
 
 ```
 cd $ANDROID_ROOT/out/target/product/$DEVICE/
 ```
 ```
-mv hybris-boot.img bak
-```
-```
-mv vendor_boot.img vbak
+mv hybris-boot.img bak && mv vendor_boot.img vbak
 ```
 ```
 wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/hybris-boot.img
@@ -217,8 +214,14 @@ cd $ANDROID_ROOT/hybris/droid-configs
 ```
 git submodule update --init --recursive
 ```
+```
+cd $ANDROID_ROOT/hybris/droid-config-Spacewar
+```
+```
+git submodule update --init --recursive
+```
 
-Now build the RPMs
+Now build the RPMs !
 
 ```
 cd $ANDROID_ROOT

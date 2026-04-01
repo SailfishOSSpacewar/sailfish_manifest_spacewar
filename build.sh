@@ -182,17 +182,15 @@ rpm/dhd/helpers/build_packages.sh -o -b hybris/mw/qt5-qpa-hwcomposer-plugin
 
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/SailfishOSSpacewar/droid-hal-img-boot-Spacewar
 rpm/dhd/helpers/build_packages.sh --mw=https://github.com/SailfishOSSpacewar/droid-system-Spacewar
-
 rpm/dhd/helpers/build_packages.sh --gg
 rpm/dhd/helpers/build_packages.sh --version
 
 # Pack rootfs and create zip
 
-export RELEASE=5.0.0.67
-export EXTRA_NAME=-auto
-
 sudo zypper in -y lvm2 atruncate pigz android-tools
 
+export RELEASE=5.0.0.67
+export EXTRA_NAME=-auto
 srcks=$ANDROID_ROOT/hybris/droid-configs/installroot/usr/share/kickstarts/Jolla-@RELEASE@-$DEVICE-@ARCH@.ks
 sed -i "s @DEVICEMODEL@ $DEVICE " $srcks
 
