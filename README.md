@@ -178,7 +178,7 @@ wget https://github.com/SailfishOSSpacewar/Releases/raw/refs/heads/main/vendor_b
 ```
 Install modules
 ```
-cd out/target/product/$DEVICE/vendor_dlkm/lib/modules/
+cd $ANDROID_ROOT/out/target/product/$DEVICE/vendor_dlkm/lib/modules/
 ```
 ```
 sudo rm -rf *
