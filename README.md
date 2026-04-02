@@ -278,7 +278,7 @@ rpm/dhd/helpers/build_packages.sh --version
 # Build SailfishOS (LVM based)
 [Version](https://en.wikipedia.org/wiki/Sailfish_OS#Version_history)
 ```
-export RELEASE=5.0.0.67
+export RELEASE=5.0.0.77
 ```
 Put whatever you want here, i.e my1
 ```
